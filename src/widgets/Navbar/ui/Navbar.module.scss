@@ -1,0 +1,27 @@
+.navbar {
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--invert-bg-color);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.links{
+  margin-left: auto;
+}
+
+.mainLink{
+  margin-right: 15px;
+}
+
+.aboutLink{
+  margin-right: 15px;
+}
+
+.switchers{
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+}

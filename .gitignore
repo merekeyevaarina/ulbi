@@ -1,0 +1,8 @@
+node_modules/
+build/
+.idea
+*storybook.log
+storybook-static/
+.DS_Store
+/test project ulbi course/
+debug-storybook.log
