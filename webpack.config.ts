@@ -4,6 +4,7 @@ import {BuildEnv, BuildPath} from "./config/build/types/config";
 import {buildWebpackConfig} from "./config/build/buildWebpackConfig";
 
 
+
 export default (env: BuildEnv) => {
     const paths:BuildPath = {
         entry:path.resolve(__dirname,'src', 'index.tsx'),
