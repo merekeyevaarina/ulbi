@@ -22,5 +22,13 @@ export default defineConfig([
     },
   },
   { settings: { react: { version: "detect" } } },
-  ...storybook.configs["flat/recommended"]
+  ...storybook.configs["flat/recommended"],
+  // Storybook 7 keeps Meta/StoryObj on the renderer package (@storybook/react).
+  // The rule below targets Storybook 8+ framework packages and breaks our build.
+  {
+    files: ["**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)", "**/*.story.@(ts|tsx|js|jsx|mjs|cjs)"],
+    rules: {
+      "storybook/no-renderer-packages": "off",
+    },
+  },
 ]);

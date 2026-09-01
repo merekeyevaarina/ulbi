@@ -1,22 +1,19 @@
+import path from "path";
 import type webpack from "webpack";
 import type { RuleSetRule } from "webpack";
 import type { BuildPath } from "../build/types/config";
-
-const path = require("path");
-const { buildCssLoaders } = require("../build/loaders/buildCssLoaders");
+import { buildCssLoaders } from "../build/loaders/buildCssLoaders";
 
 module.exports = ({ config }: { config: webpack.Configuration }) => {
-    const paths:BuildPath = {
-
+    const paths: BuildPath = {
         entry: '',
         build: '',
         html: '',
-        src: path.resolve(__dirname, '..', '..', 'src')
+        src: path.resolve(__dirname, '..', '..', 'src'),
     };
 
     config.resolve.modules.push(paths.src);
     config.resolve.extensions.push('.ts', '.tsx');
-
 
     config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
         if (/svg/.test(String(rule.test))) {
@@ -26,8 +23,8 @@ module.exports = ({ config }: { config: webpack.Configuration }) => {
     });
     config.module.rules.push({
         test: /\.svg$/,
-        use:['@svgr/webpack'],
-    })
+        use: ['@svgr/webpack'],
+    });
     config.module.rules.push(buildCssLoaders(true));
 
     return config;
