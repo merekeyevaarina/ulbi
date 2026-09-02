@@ -9,8 +9,9 @@ export function buildCssLoaders(isDev: boolean) {
                  modules: {
                      auto: (resPath: string) => resPath.endsWith('.module.scss'),
                      namedExport: false,
+                     exportLocalsConvention: 'as-is',
                      localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
-                 },
+                 }
              },
          },
          "sass-loader",

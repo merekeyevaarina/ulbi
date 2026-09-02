@@ -1,6 +1,12 @@
-@import './variables/global';
-@import './themes/normal';
-@import './themes/dark';
+@use './variables/global';
+@use './themes/normal';
+@use './themes/dark';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .app{
 font: var(--font-m);
