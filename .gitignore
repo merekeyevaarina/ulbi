@@ -6,3 +6,5 @@ storybook-static/
 .DS_Store
 /test project ulbi course/
 debug-storybook.log
+.loki/report.html
+.loki/report.json
