@@ -53,6 +53,7 @@
     "eslint": "^9.39.5",
     "eslint-plugin-i18n": "^2.4.0",
     "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-storybook": "^10.5.10",
     "file-loader": "^6.2.0",
     "globals": "^17.11.0",
